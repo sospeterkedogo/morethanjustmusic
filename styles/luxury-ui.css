@@ -15,7 +15,7 @@
   --luxury-accent: #e52e71;
   --luxury-gold: #ffd700;
   --luxury-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.13);
-  --luxury-radius: 32px;
+  --luxury-radius: 0;
   --luxury-spacing: clamp(1.5rem, 4vw, 3.5rem);
   --luxury-font: 'General Sans', 'Inter', 'Segoe UI', Arial, sans-serif;
 }
@@ -35,7 +35,7 @@ html, body {
 .lux-glass {
   background: var(--luxury-glass);
   box-shadow: var(--luxury-shadow);
-  border-radius: var(--luxury-radius);
+  border-radius: 0;
   backdrop-filter: var(--luxury-glass-blur);
   -webkit-backdrop-filter: var(--luxury-glass-blur);
   border: 1px solid rgba(255,255,255,0.18);
@@ -70,7 +70,7 @@ html, body {
 .lux-card {
   background: var(--luxury-glass);
   box-shadow: var(--luxury-shadow);
-  border-radius: var(--luxury-radius);
+  border-radius: 0;
   padding: 2.5rem 2rem;
   margin: 1.5rem 0;
   transition: box-shadow 0.3s;
@@ -82,7 +82,7 @@ html, body {
 .lux-footer {
   background: var(--luxury-glass);
   box-shadow: var(--luxury-shadow);
-  border-radius: var(--luxury-radius) var(--luxury-radius) 0 0;
+  border-radius: 0;
   padding: 2rem 0 1rem 0;
   color: var(--luxury-primary);
   font-size: clamp(1rem, 1.2vw, 1.1rem);
@@ -93,7 +93,7 @@ html, body {
 .lux-nav {
   background: var(--luxury-glass);
   box-shadow: var(--luxury-shadow);
-  border-radius: 0 0 var(--luxury-radius) var(--luxury-radius);
+  border-radius: 0;
   padding: 1rem 2vw;
   display: flex;
   align-items: center;
@@ -107,7 +107,7 @@ html, body {
 .lux-logo {
   width: 56px !important;
   height: 56px !important;
-  border-radius: 50%;
+  border-radius: 0;
   object-fit: cover;
   box-shadow: 0 2px 8px rgba(0,0,0,0.10);
   border: 2px solid var(--luxury-gold);
@@ -138,7 +138,7 @@ html, body {
   font-size: clamp(1rem, 1.5vw, 1.2rem);
   font-weight: 500;
   padding: 0.5rem 1rem;
-  border-radius: 8px;
+  border-radius: 0;
   transition: background 0.2s, color 0.2s;
 }
 .lux-nav-links li a:hover {
