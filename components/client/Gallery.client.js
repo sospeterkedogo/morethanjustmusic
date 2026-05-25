@@ -1,6 +1,4 @@
-
 import Image from 'next/image';
-// import styles from '../styles/Gallery.module.css';
 
 const features = [
   {
@@ -19,7 +17,7 @@ const features = [
     src: '/images/basketball.jpg',
     alt: 'Basketball',
     title: 'Basketball',
-    desc: 'All things Sports: news, games, and player highlights.',
+    desc: 'All things basketball: news, games, and player highlights.',
   },
   {
     src: '/images/instagram.jpg',
@@ -70,7 +68,6 @@ const features = [
     desc: 'More Lamborghini action and automotive passion.',
   },
 ];
-
 
 export default function Gallery() {
   return (

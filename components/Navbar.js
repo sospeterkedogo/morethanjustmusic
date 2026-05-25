@@ -1,11 +1,10 @@
 
-import Image from 'next/image';
-import logo from '../public/images/logo.jpeg';
 
+export default function Navbar() {
   return (
     <nav className="lux-nav lux-glass">
       <div style={{display: 'flex', alignItems: 'center'}}>
-        <Image src={logo} alt="Logo" width={56} height={56} className="lux-logo" priority />
+        <img src="/images/logo.jpeg" alt="Logo" width={56} height={56} className="lux-logo" />
         <span className="lux-nav-brand">MoreThanJustMusic</span>
       </div>
       <ul className="lux-nav-links">

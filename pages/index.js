@@ -1,11 +1,12 @@
 
-import dynamic from 'next/dynamic';
+
+
 import Head from 'next/head';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-const Gallery = dynamic(() => import('../components/Gallery'), { ssr: false });
-
+import { useRouter } from 'next/router';
 export default function Home() {
+  const router = useRouter();
   return (
     <>
       <Head>
@@ -22,8 +23,16 @@ export default function Home() {
             <span style={{ fontWeight: 700, color: 'var(--luxury-accent)' }}>Coming Soon...</span>
           </h2>
         </header>
-        <div id="gallery">
-          <Gallery />
+        <div id="gallery" style={{textAlign: 'center', padding: '2rem'}}>
+          <em>Gallery is now available on a dedicated page.</em>
+          <br /><br />
+          <button
+            className="lux-card"
+            style={{fontSize: '1.2rem', padding: '1rem 2.5rem', cursor: 'pointer', border: 'none', borderRadius: '2rem', background: 'linear-gradient(90deg, #ffd700 0%, #e52e71 100%)', color: '#fff', fontWeight: 700, boxShadow: '0 2px 8px rgba(0,0,0,0.10)'}}
+            onClick={() => router.push('/gallery')}
+          >
+            Go to Gallery
+          </button>
         </div>
       </main>
       <Footer />
