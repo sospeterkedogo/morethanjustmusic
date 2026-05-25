@@ -15,35 +15,11 @@ export default function Home() {
       </Head>
       <Navbar />
       <main>
-        <header style={{
-          background: 'rgba(255,255,255,0.05)',
-          borderRadius: '32px',
-          boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.37)',
-          padding: '32px 24px',
-          maxWidth: '480px',
-          textAlign: 'center',
-          border: '1px solid rgba(255,255,255,0.18)',
-          margin: '2.5rem auto 1.5rem auto',
-        }}>
-          <h1 style={{
-            fontSize: 'clamp(2rem, 7vw, 2.8rem)',
-            fontWeight: 800,
-            marginBottom: '1.2rem',
-            background: 'linear-gradient(90deg, #ff8c00 0%, #e52e71 100%)',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
-          }}>
-            MoreThanJustMusic
-          </h1>
-          <h2 style={{
-            fontSize: 'clamp(1.1rem, 3vw, 1.5rem)',
-            fontWeight: 400,
-            marginBottom: '2.5rem',
-            color: '#f8fafc',
-            opacity: 0.85,
-          }}>
+        <header className="lux-glass" style={{maxWidth: '540px', margin: '2.5rem auto 1.5rem auto', textAlign: 'center', padding: '2.5rem 2rem'}}>
+          <h1 className="lux-title">MoreThanJustMusic</h1>
+          <h2 className="lux-subtitle">
             Stay Tuned!<br />
-            <span style={{ fontWeight: 600, color: '#ff8c00' }}>Coming Soon...</span>
+            <span style={{ fontWeight: 700, color: 'var(--luxury-accent)' }}>Coming Soon...</span>
           </h2>
         </header>
         <div id="gallery">

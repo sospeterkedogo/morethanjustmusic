@@ -1,15 +1,14 @@
+
 import Image from 'next/image';
-import styles from '../styles/Gallery.module.css';
 import logo from '../public/images/logo.jpeg';
 
-export default function Navbar() {
   return (
-    <nav className={styles.navbar}>
-      <div className={styles.logoContainer}>
-        <Image src={logo} alt="Logo" width={48} height={48} className={styles.logo} priority />
-        <span className={styles.brand}>MoreThanJustMusic</span>
+    <nav className="lux-nav lux-glass">
+      <div style={{display: 'flex', alignItems: 'center'}}>
+        <Image src={logo} alt="Logo" width={56} height={56} className="lux-logo" priority />
+        <span className="lux-nav-brand">MoreThanJustMusic</span>
       </div>
-      <ul className={styles.navLinks}>
+      <ul className="lux-nav-links">
         <li><a href="#gallery">Gallery</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>

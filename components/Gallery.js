@@ -70,24 +70,23 @@ const features = [
   },
 ];
 
-export default function Gallery() {
   return (
-    <section className={styles.gallerySection} aria-label="Feature Gallery">
-      <div className={styles.galleryGrid}>
+    <section className="lux-section" aria-label="Feature Gallery">
+      <div className="galleryGrid">
         {features.map((feature, idx) => (
-          <figure key={feature.src} className={styles.galleryItem} tabIndex={0} aria-label={feature.title}>
+          <figure key={feature.src} className="lux-card galleryItem" tabIndex={0} aria-label={feature.title}>
             <Image
               src={feature.src}
               alt={feature.title}
               width={400}
               height={400}
-              className={styles.galleryImage}
+              className="galleryImage"
               priority={idx === 0}
               sizes="(max-width: 600px) 90vw, (max-width: 1200px) 45vw, 400px"
             />
-            <figcaption className={styles.caption}>
-              <span style={{display: 'block', fontSize: '1.25rem', fontWeight: 700, marginBottom: '0.3rem'}}>{feature.title}</span>
-              <span style={{fontSize: '1rem', fontWeight: 400, color: '#f8fafc', opacity: 0.85}}>{feature.desc}</span>
+            <figcaption style={{padding: '1.1rem 1rem 1.3rem 1rem', textAlign: 'center'}}>
+              <span style={{display: 'block', fontFamily: 'var(--luxury-font)', fontSize: 'clamp(1.3rem,2vw,1.7rem)', fontWeight: 700, marginBottom: '0.3rem', background: 'linear-gradient(90deg, #ffd700 0%, #e52e71 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent'}}>{feature.title}</span>
+              <span style={{fontFamily: 'var(--luxury-font)', fontSize: 'clamp(1rem,1.2vw,1.1rem)', fontWeight: 400, color: '#1a1a2e', opacity: 0.85}}>{feature.desc}</span>
             </figcaption>
           </figure>
         ))}

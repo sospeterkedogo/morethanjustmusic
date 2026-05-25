@@ -1,0 +1,163 @@
+/*
+  luxury-ui.css
+  2026 High-End Luxury Design System (inspired by latest trends: Neumorphism 2.0, Glassmorphism, Fluid Gradients, Soft Shadows, and Modern Font Pairings)
+  Font: 'General Sans' (modern luxury), fallback to 'Inter', 'Segoe UI', Arial, sans-serif
+  Uses variable font weights, large fluid typography, and elegant spacing
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=General+Sans:wght@400;500;700;800&display=swap');
+
+:root {
+  --luxury-bg: linear-gradient(135deg, #f8fafc 0%, #e0e7ef 100%);
+  --luxury-glass: rgba(255,255,255,0.7);
+  --luxury-glass-blur: blur(18px);
+  --luxury-primary: #1a1a2e;
+  --luxury-accent: #e52e71;
+  --luxury-gold: #ffd700;
+  --luxury-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.13);
+  --luxury-radius: 32px;
+  --luxury-spacing: clamp(1.5rem, 4vw, 3.5rem);
+  --luxury-font: 'General Sans', 'Inter', 'Segoe UI', Arial, sans-serif;
+}
+
+html, body {
+  background: var(--luxury-bg);
+  font-family: var(--luxury-font);
+  color: var(--luxury-primary);
+  letter-spacing: 0.01em;
+  font-size: clamp(16px, 2vw, 22px);
+  font-weight: 400;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.lux-glass {
+  background: var(--luxury-glass);
+  box-shadow: var(--luxury-shadow);
+  border-radius: var(--luxury-radius);
+  backdrop-filter: var(--luxury-glass-blur);
+  -webkit-backdrop-filter: var(--luxury-glass-blur);
+  border: 1px solid rgba(255,255,255,0.18);
+}
+
+.lux-title {
+  font-family: var(--luxury-font);
+  font-weight: 800;
+  font-size: clamp(2.5rem, 7vw, 4.5rem);
+  background: linear-gradient(90deg, var(--luxury-gold) 0%, var(--luxury-accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.5em;
+}
+
+.lux-subtitle {
+  font-family: var(--luxury-font);
+  font-weight: 500;
+  font-size: clamp(1.2rem, 3vw, 2.2rem);
+  color: var(--luxury-primary);
+  opacity: 0.8;
+  margin-bottom: 2em;
+}
+
+.lux-section {
+  padding: var(--luxury-spacing) 0;
+}
+
+.lux-card {
+  background: var(--luxury-glass);
+  box-shadow: var(--luxury-shadow);
+  border-radius: var(--luxury-radius);
+  padding: 2.5rem 2rem;
+  margin: 1.5rem 0;
+  transition: box-shadow 0.3s;
+}
+.lux-card:hover {
+  box-shadow: 0 16px 48px 0 rgba(229, 46, 113, 0.13);
+}
+
+.lux-footer {
+  background: var(--luxury-glass);
+  box-shadow: var(--luxury-shadow);
+  border-radius: var(--luxury-radius) var(--luxury-radius) 0 0;
+  padding: 2rem 0 1rem 0;
+  color: var(--luxury-primary);
+  font-size: clamp(1rem, 1.2vw, 1.1rem);
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.lux-nav {
+  background: var(--luxury-glass);
+  box-shadow: var(--luxury-shadow);
+  border-radius: 0 0 var(--luxury-radius) var(--luxury-radius);
+  padding: 1rem 2vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  margin-bottom: 2rem;
+}
+
+.lux-logo {
+  width: 56px !important;
+  height: 56px !important;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  border: 2px solid var(--luxury-gold);
+}
+
+.lux-nav-brand {
+  font-family: var(--luxury-font);
+  font-weight: 700;
+  font-size: clamp(1.5rem, 2vw, 2.5rem);
+  background: linear-gradient(90deg, var(--luxury-gold) 0%, var(--luxury-accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: 0.04em;
+  margin-left: 0.7rem;
+}
+
+.lux-nav-links {
+  display: flex;
+  gap: 2vw;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.lux-nav-links li a {
+  color: var(--luxury-primary);
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: background 0.2s, color 0.2s;
+}
+.lux-nav-links li a:hover {
+  background: linear-gradient(90deg, var(--luxury-gold) 0%, var(--luxury-accent) 100%);
+  color: #fff;
+}
+
+@media (max-width: 700px) {
+  .lux-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.5rem 4vw;
+  }
+  .lux-nav-links {
+    width: 100%;
+    justify-content: flex-end;
+    gap: 1vw;
+  }
+  .lux-logo {
+    margin-bottom: 0.5rem;
+  }
+}
